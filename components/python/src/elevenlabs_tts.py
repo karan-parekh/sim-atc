@@ -33,7 +33,7 @@ class ElevenLabsTTS:
         model_id: str = "eleven_multilingual_v2",
         stability: float = 0.5,
         similarity_boost: float = 0.75,
-        output_format: str = "pcm_16000",
+        output_format: str = "pcm_24000",
         trigger_generation: bool = False,
     ):
         self.api_key = api_key or os.getenv("ELEVENLABS_API_KEY")
@@ -66,14 +66,9 @@ class ElevenLabsTTS:
         payload = {
             "text": text,
             "try_trigger_generation": self.trigger_generation,
+            "flush": True,
         }
         await ws.send(json.dumps(payload))
-
-    async def finish_input(self) -> None:
-        try:
-            await self.send_text("")
-        except websockets.exceptions.ConnectionClosed:
-            pass
 
     async def receive_events(self) -> AsyncIterator[TTSChunkEvent]:
         while not self._close_signal.is_set():
