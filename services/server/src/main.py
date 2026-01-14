@@ -14,8 +14,8 @@ from langchain_core.runnables import RunnableGenerator
 from langgraph.checkpoint.memory import InMemorySaver
 from starlette.staticfiles import StaticFiles
 
-from assemblyai_stt import AssemblyAISTT
-from components.python.src.cartesia_tts import CartesiaTTS
+from realtime_stt import ReatimeSTT
+from cartesia_tts import CartesiaTTS
 from events import (
     AgentChunkEvent,
     AgentEndEvent,
@@ -29,7 +29,7 @@ from utils import merge_async_iters
 load_dotenv()
 
 # Static files are served from the shared web build output
-STATIC_DIR = Path(__file__).parent.parent.parent / "web" / "dist"
+STATIC_DIR = Path(__file__).parent.parent.parent / "client" / "dist"
 
 if not STATIC_DIR.exists():
     raise RuntimeError(
@@ -99,7 +99,7 @@ async def _stt_stream(
     Yields:
         STT events (stt_chunk for partials, stt_output for final transcripts)
     """
-    stt = AssemblyAISTT(sample_rate=16000)
+    stt = ReatimeSTT(sample_rate=16000)
 
     async def send_audio():
         """
@@ -271,7 +271,7 @@ async def _tts_stream(
 pipeline = (
     RunnableGenerator(_stt_stream)  # Audio -> STT events
     | RunnableGenerator(_agent_stream)  # STT events -> STT + Agent events
-    | RunnableGenerator(_tts_stream)  # STT + Agent events -> All events
+    # | RunnableGenerator(_tts_stream)  # STT + Agent events -> All events
 )
 
 

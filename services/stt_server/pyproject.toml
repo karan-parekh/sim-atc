@@ -1,0 +1,12 @@
+[project]
+name = "stt-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "keyboard>=0.13.5",
+    "numpy>=2.4.1",
+    "realtimestt>=0.3.104",
+    "scipy>=1.15.2",
+]
