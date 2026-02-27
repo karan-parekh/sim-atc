@@ -1,6 +1,12 @@
-# Voice Sandwich Demo 🥪
+# Sim ATC 🎤✈️
 
-A real-time, voice-to-voice AI pipeline demo featuring a sandwich shop order assistant. Built with LangChain/LangGraph agents, AssemblyAI for speech-to-text, and Cartesia for text-to-speech.
+Sim ATC is a scenario based training application that produces procedurelly generated scenarios for pilots to test their skills. It aims to provide realistic scenarios with the help of LLM-based voice-to-voice agents acting as different controllers such as ATIS, Ground and Tower.
+
+## Proof of Concept
+For the purpose of POC, Sim ATC will only be able to handle Melbourne Airport's Clerance Delivery and Ground Control with a hand off to Tower at the end. If this is successful and works as intended, future development will be considered.
+
+## Notes
+This is a fork of the original voic demo by LangChain but API calls external agents such as ChatGPT, Claude, Assembly AI, Elevenlabs, etc. has been replaced with local models using Ollama
 
 ## Architecture
 
@@ -13,13 +19,13 @@ flowchart LR
         WS_In[WebSocket] -->|Audio + Events| Speaker[🔊 Speaker]
     end
 
-    subgraph Server [Node.js / Python]
+    subgraph Server [Python]
         WS_Receiver[WS Receiver] --> Pipeline
 
         subgraph Pipeline [Voice Agent Pipeline]
             direction LR
-            STT[AssemblyAI STT] -->|Transcripts| Agent[LangChain Agent]
-            Agent -->|Text Chunks| TTS[Cartesia TTS]
+            STT[STT] -->|Transcripts| Agent[LangChain Agent]
+            Agent -->|Text Chunks| TTS[TTS]
         end
 
         Pipeline -->|Events| WS_Sender[WS Sender]
@@ -39,48 +45,9 @@ Each stage is an async generator that transforms a stream of events:
 
 ## Prerequisites
 
-- **Node.js** (v18+) or **Python** (3.11+)
-- **pnpm** or **uv** (Python package manager)
-
-### API Keys
-
-| Service | Environment Variable | Purpose |
-|---------|---------------------|---------|
-| AssemblyAI | `ASSEMBLYAI_API_KEY` | Speech-to-Text |
-| Cartesia | `CARTESIA_API_KEY` | Text-to-Speech |
-| Anthropic | `ANTHROPIC_API_KEY` | LangChain Agent (Claude) |
-
-## Quick Start
-
-### Using Make (Recommended)
-
-```bash
-# Install all dependencies
-make bootstrap
-
-# Run TypeScript implementation (with hot reload)
-make dev-ts
-
-# Or run Python implementation (with hot reload)
-make dev-py
-```
-
-The app will be available at `http://localhost:8000`
+- **uv** (Python package manager)
 
 ### Manual Setup
-
-#### TypeScript
-
-```bash
-cd components/typescript
-pnpm install
-cd ../web
-pnpm install && pnpm build
-cd ../typescript
-pnpm run server
-```
-
-#### Python
 
 ```bash
 cd components/python
@@ -90,20 +57,19 @@ pnpm install && pnpm build
 cd ../python
 uv run src/main.py
 ```
+The app will be available at `http://localhost:8000`
+
 
 ## Project Structure
-
 ```
-components/
-├── web/                 # Svelte frontend (shared by both backends)
+services/
+├── agents
+│   ├── main.py                 # Main file for agents
+│   ├── prompts/                # Collections of prompts for different agents
+│   └── tools/                  # Agentic tools 
+├── client/                     # Svelte frontend (shared by both backends)
 │   └── src/
-├── typescript/          # Node.js backend
-│   └── src/
-│       ├── index.ts     # Main server & pipeline
-│       ├── assemblyai/  # AssemblyAI STT client
-│       ├── cartesia/    # Cartesia TTS client
-│       └── elevenlabs/  # Alternate TTS client
-└── python/              # Python backend
+└── server/                     # Python backend
     └── src/
         ├── main.py             # Main server & pipeline
         ├── assemblyai_stt.py
@@ -111,6 +77,7 @@ components/
         ├── elevenlabs_tts.py   # Alternate TTS client
         └── events.py           # Event type definitions
 ```
+> Project structure might not be up to date.
 
 ## Event Types
 
