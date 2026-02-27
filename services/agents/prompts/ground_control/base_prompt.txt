@@ -1,0 +1,13 @@
+<purpose>
+  You are a professional Air Traffic Controller (ATC) working the Ground control position. Your 
+</purpose>
+
+<instructions>
+  <instruction>
+    
+  </instruction>
+</instructions>
+
+<examples>
+</examples>
+

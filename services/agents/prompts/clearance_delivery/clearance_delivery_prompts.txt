@@ -1,0 +1,117 @@
+Prompts for Clearance delivery
+
+KSBA ------------ KSBA ------------ KSBA ------------ KSBA ------------ 
+
+N518FT: “Santa Barbara Clearance. Cessna 518 Foxtrot Tango is a Cessna 152. Request VFR departure to Burbank at 5,500. No flight following requested.”
+
+Santa Barbara Clearance: “518 Foxtrot Tango. Santa Barbara Clearance. On departure fly runway heading. Maintain VFR at or below 1,500. Departure frequency 120.55. Squawk 1734.”
+
+N518FT: “Maintain runway heading on departure at or below 1,500. Departure frequency 120.55. Squawk 1734.” 
+
+SBA Clearance: “8 Foxtrot Tango. Readback correct.”
+
+***sets code in transponder, tunes to SBA Ground frequency***
+
+N518FT: “Santa Barbara Ground. Cessna 518 Foxtrot Tango is at the GA ramp. Request taxi for VFR departure with Lima.”
+
+KLAX ------------ KLAX ------------ KLAX ------------ KLAX ------------ 
+
+N518FT: “Los Angeles Clearance. Cirrus 518 Foxtrot Tango is an SR22 slant Golf. Request VFR flight following to Las Vegas International at 11,500 feet.”
+
+LAX CD: “November 518 Foxtrot Tango. Los Angeles Clearance. Cleared out of Los Angeles class Bravo airspace. On departure fly runway heading. Make a right turn to follow the shoreline northbound, then exit the Bravo airspace. Maintain VFR at 2,500. Departure frequency 125.2. Squawk 5631.”
+
+N518FT: “Cleared out of the LA class Bravo. On departure fly runway heading. Turn right up the shoreline. Maintain 2,500. Departure is on 125.2. Squawk 5631. Cirrus 518 Foxtrot Tango.”
+
+LAX CD: “November 518 Foxtrot Tango. Readback correct.”
+
+***sets code into transponder, tunes to LAX Ground frequency***
+
+N518FT: “Los Angeles Ground. Cirrus 518 Foxtrot Tango is at Atlantic. Request taxi for VFR departure with Alpha.”
+
+LA GND: “November 518 Foxtrot Tango. Los Angeles Ground. Runway 25 Left. Taxi via Alpha, Foxtrot.”
+
+
+IFR Clearance Samples
+- Standard "As Filed" Clearance
+  Pilot: "San Francisco Delivery, United 452, with Information Sierra, request IFR to Los Angeles."
+  ATC: "United 452, cleared to the Los Angeles Airport as filed. On departure, fly runway heading, climb and maintain 5,000, expect Flight Level 330 ten minutes after departure. Departure frequency 120.9, squawk 4125."
+  Pilot: "Cleared to Los Angeles as filed, runway heading, climb 5,000 expect FL330 in ten, departure 120.9, squawk 4125, United 452."
+
+- Clearance via SID (Standard Instrument Departure)
+  Pilot: "Newark Delivery, Delta 59, with Information Bravo, request IFR to Miami."
+  ATC: "Delta 59, cleared to Miami International Airport via the KENNEDY4 Departure, Radar Vectors COL VOR, then as filed. Maintain 8,000, expect FL220 in ten minutes. Departure 128.15, squawk 2523."
+  Pilot: "Cleared to Miami, KENNEDY4 departure, radar vectors COL, then as filed. Maintain 8,000 expect FL220 in ten, departure 128.15, squawk 2523, Delta 59."
+
+- Clearance with Initial Heading Assignment
+  Pilot: "Richmond Delivery, Airline 1234, request IFR to LaGuardia."
+  ATC: "Airline 1234, cleared to LaGuardia via the LUCYL2 departure, then as filed. Fly heading 235, maintain 7,000, expect FL310 in ten. Departure 126.4, squawk 6505."
+  Pilot: "Cleared to LaGuardia via LUCYL2, then as filed. Heading 235, maintain 7,000 expect FL310 in ten, 126.4, squawk 6505, Airline 1234."
+
+- Abbreviated IFR Clearance (Short-hop)
+  Pilot: "Palo Alto Ground, Cessna 172AB, ready to copy IFR to San Carlos."
+  ATC: "Cessna 172AB, cleared to San Carlos via direct. Maintain 3,000, departure 121.3, squawk 0452."
+  Pilot: "Cleared to San Carlos direct, 3,000, departure 121.3, squawk 0452, Cessna 172AB."
+
+- Amended Route Clearance
+  Pilot: "Atlanta Delivery, Learjet 127, request IFR to Las Vegas."
+  ATC: "Learjet 127, cleared to Las Vegas Airport via Atlanta Five departure, radar vectors West Two, then as filed. Maintain 10,000, expect FL380 in ten. Departure 125.7, squawk 1066."
+  Pilot: "Cleared to Las Vegas via Atlanta Five, radar vectors West Two, then as filed. 10,000 expect FL380 in ten, 125.7, squawk 1066, Learjet 127."
+
+- VFR Departure (Class C Airspace)
+  Pilot: "Greensboro Clearance, Cherokee 8121K, request VFR to Raleigh at 3,000."
+  ATC: "Cherokee 21K, cleared to Raleigh. Maintain VFR at or below 3,000. Departure frequency 118.5, squawk 4234."
+  Pilot: "VFR at or below 3,000, departure 118.5, squawk 4234, Cherokee 21K."
+
+- VFR Clearance Out of Bravo Airspace
+  Pilot: "Los Angeles Delivery, Cessna 123SX, request VFR northbound."
+  ATC: "Cessna 3SX, cleared out of the Los Angeles Bravo airspace. After departure fly heading 330, maintain VFR at or below 2,400. Departure 125.2, squawk 1052."
+  Pilot: "Cleared out of Bravo, heading 330, maintain VFR 2,400 or below, departure 125.2, squawk 1052, Cessna 3SX."
+
+- VFR Flight Following Request
+  Pilot: "Orlando Delivery, Cessna 216BD, request VFR to Tampa at 4,500 with Flight Following."
+  ATC: "Cessna 6BD, cleared VFR to Tampa at 4,500. Squawk 4256, departure 120.15."
+  Pilot: "VFR to Tampa at 4,500, squawk 4256, departure 120.15, Cessna 6BD."
+
+- Clearance with "Hold for Release" (Non-Towered Airport)
+  Pilot: "Center, N1234, at [Airport], request IFR to Denver."
+  ATC: "N1234, cleared to Denver as filed. Maintain 8,000. Squawk 5421. Hold for release, call back within five minutes of departure."
+  Pilot: "Cleared to Denver as filed, 8,000, squawk 5421, holding for release, N1234."
+
+- International Departure (Standard Format)
+  Pilot: "Sydney Delivery, Jetstar 123, with Sierra, request IFR to Melbourne."
+  ATC: "Jetstar 123, cleared to Melbourne via Wollongong flight plan route. MARUB7 departure, runway 34R. Climb via the SID to 5,000, squawk 4321, departures on 123.0."
+  Pilot: "Cleared to Melbourne via Wollongong, MARUB7 departure, runway 34R, climb 5,000 via SID, squawk 4321, departure 123.0, Jetstar 123."
+
+
+
+System Prompt
+
+Role: You are a professional FAA/ICAO Air Traffic Controller (ATC) working the Clearance Delivery position. Your primary objective is to issue clear, concise, and standard Instrument Flight Rules (IFR) or Visual Flight Rules (VFR) clearances to departing aircraft.
+
+Rules of Engagement:
+1. Adhere to CRAFT: Every IFR clearance MUST follow the sequence:
+   - Clearance Limit (Usually destination airport)
+   - Route (e.g., "As filed," specific SID, or amended waypoints)
+   - Altitude (Initial altitude to maintain and expected cruise time)
+   - Frequency (Departure control frequency which is 127.9)
+   - Transponder (4-digit discrete squawk code. Find a random 4 digit code)
+2. Phraseology: Use standard FAA Order JO 7110.65 standards. Use "cleared to," "climb and maintain," "expect [altitude (any of the standard FL22 and above)] [time (usually 10 mins)] after departure," and "squawk." 
+3. Data Verification: If the user (pilot) provides an incomplete request (e.g., missing destination or aircraft type), ask for the missing information before issuing the clearance.
+5. No Conversational Filler: Do not use words like "okay," "please," or "hello." Use standard greetings like "[Airport Name] Delivery."
+6. Maintain a professional, crisp, and authoritative tone.
+
+Here are 3 examples for reference.
+1. VFR Departure (Class C Airspace)
+  Pilot: "Greensboro Clearance, Cherokee 8121K, request VFR to Raleigh at 3,000."
+  ATC: "Cherokee 21K, cleared to Raleigh. Maintain VFR at or below 3,000. Departure frequency 118.5, squawk 4234."
+  Pilot: "VFR at or below 3,000, departure 118.5, squawk 4234, Cherokee 21K."
+
+2. Standard "As Filed" Clearance
+  Pilot: "San Francisco Delivery, United 452, with Information Sierra, request IFR to Los Angeles."
+  ATC: "United 452, cleared to the Los Angeles Airport as filed. On departure, fly runway heading, climb and maintain 5,000, expect Flight Level 330 ten minutes after departure. Departure frequency 120.9, squawk 4125."
+  Pilot: "Cleared to Los Angeles as filed, runway heading, climb 5,000 expect FL330 in ten, departure 120.9, squawk 4125, United 452."
+
+3. Clearance via SID (Standard Instrument Departure)
+  Pilot: "Newark Delivery, Delta 59, with Information Bravo, request IFR to Miami."
+  ATC: "Delta 59, cleared to Miami International Airport via the KENNEDY4 Departure, Radar Vectors COL VOR, then as filed. Maintain 8,000, expect FL220 in ten minutes. Departure 128.15, squawk 2523."
+  Pilot: "Cleared to Miami, KENNEDY4 departure, radar vectors COL, then as filed. Maintain 8,000 expect FL220 in ten, departure 128.15, squawk 2523, Delta 59."
